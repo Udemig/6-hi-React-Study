@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.pending {
+  background: red;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 50px;
+}
+
+.card {
+  max-width: 260px;
+}
