@@ -3,7 +3,8 @@ import { BasketContext } from './../context/basketContext';
 import { BiSolidUpArrow, BiSolidDownArrow } from 'react-icons/bi';
 
 const Checkout = () => {
-  const { basket, addToBasket } = useContext(BasketContext);
+  const { basket, addToBasket, removeFromBasket } =
+    useContext(BasketContext);
 
   return (
     <div>
@@ -35,7 +36,11 @@ const Checkout = () => {
               onClick={() => addToBasket(i)}
             />
 
-            <BiSolidDownArrow role="button" className="text-danger" />
+            <BiSolidDownArrow
+              role="button"
+              className="text-danger"
+              onClick={() => removeFromBasket(i)}
+            />
           </div>
         </div>
       ))}
