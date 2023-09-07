@@ -6,12 +6,22 @@ const Checkout = () => {
   const { basket, addToBasket, removeFromBasket } =
     useContext(BasketContext);
 
+  const total = basket.reduce(
+    (total, i) => total + i.price * i.amount,
+    0
+  );
+
   return (
     <div>
-      {basket.length === 0 && (
+      {basket.length === 0 ? (
         <h3 className="text-center my-5">
           Öncelikle sepete bir kaç ürün ekleyiniz
         </h3>
+      ) : (
+        <h5 className="text-center my-4">
+          Toplam
+          <span className="text-success"> ${total.toFixed(2)}</span>
+        </h5>
       )}
 
       {basket?.map((i, index) => (
