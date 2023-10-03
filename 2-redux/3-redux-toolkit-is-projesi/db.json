@@ -91,85 +91,22 @@
       "date": "3/28/2023"
     },
     {
-      "position": "asd",
-      "company": "asd",
-      "location": "asdasd",
-      "status": "Devam Ediyor",
-      "type": "Uzaktan",
-      "id": "81874892-a8f2-4178-9ce1-6eb88f674c0c",
-      "date": "9/2/2023"
-    },
-    {
-      "position": "adasd",
-      "company": "asdas",
-      "location": "dasdasd",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "id": "0aabd128-3b74-4700-93be-c8a2821475a2",
-      "date": "9/2/2023"
-    },
-    {
-      "position": "asd",
-      "company": "asd",
-      "location": "asdasd",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "id": "ed3ae2cc-4940-4752-98af-a5f2532aaba9",
-      "date": "9/2/2023"
-    },
-    {
-      "position": "yeni iş",
-      "company": "asels",
-      "location": "ankarar",
-      "status": "Mülakat",
-      "type": "Staj",
-      "id": "0ea8583f-cf45-48b7-a4f0-13e2eefb4c0e",
-      "date": "9/2/2023"
-    },
-    {
-      "position": "asd",
-      "company": "asd",
-      "location": "asd",
-      "status": "Devam Ediyor",
-      "type": "Uzaktan",
-      "id": "1bf0295a-025f-4c6c-bf4f-4d44e2d7324d",
-      "date": "9/2/2023"
-    },
-    {
-      "position": "werwer",
-      "company": "werwer",
-      "location": "werwer",
-      "status": "Mülakat",
-      "type": "Uzaktan",
-      "id": "e77985eb-abcb-4cbb-9f6f-0145b5b088e2",
-      "date": "9/30/2023"
-    },
-    {
-      "position": "erwer",
-      "company": "werwer",
-      "location": "werwer",
-      "status": "Mülakat",
-      "type": "Yarı Zamanlı",
-      "id": "bf34a392-792f-4bc1-8bf2-c38f75c9b504",
-      "date": "9/30/2023"
-    },
-    {
-      "position": "werwer",
-      "company": "werwer",
-      "location": "werwer",
-      "status": "Devam Ediyor",
-      "type": "Staj",
-      "id": "365c187d-0edd-4ad9-a469-e8c46348574b",
-      "date": "9/30/2023"
-    },
-    {
-      "position": "tryrty",
-      "company": "rtyrt",
-      "location": "rtytry",
+      "position": "React Natie",
+      "company": "CGI",
+      "location": "Uzaktan",
       "status": "Devam Ediyor",
       "type": "Tam Zamanlı",
-      "id": "88cc13bf-a9f5-4ad1-93f6-5835d05f0911",
-      "date": "9/30/2023"
+      "id": "c5556876-e3f3-4e90-a98a-553864d9aa17",
+      "date": "10/2/2023"
+    },
+    {
+      "position": "wrwer",
+      "company": "werwer",
+      "location": "werwerwer",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "id": "ac95ff9c-e120-4446-ab32-f17e9f7b0033",
+      "date": "10/2/2023"
     }
   ]
 }

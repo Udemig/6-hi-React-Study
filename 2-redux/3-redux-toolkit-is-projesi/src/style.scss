@@ -192,3 +192,8 @@ header {
     }
 
 }
+
+.filter-sec{
+@extend .add-sec;
+max-width: 1000px;
+}
