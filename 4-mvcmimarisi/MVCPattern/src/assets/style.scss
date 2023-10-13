@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffffff;
+  background-color: rgb(88, 87, 87);
+  overflow-x: hidden;
+}
+
+//header
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+
+  a {
+    color: gold;
+    text-decoration: none;
+  }
+
+  .active {
+    display: none;
+  }
+}
+
+//Liste Sayfası
+
+.container {
+  width: 70vw;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .post {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.37);
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      p {
+        color: gold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//ekleme sayfası
+
+form {
+  width: 70vw;
+  max-width: 900px;
+  min-height: 70vh;
+  background-color: black;
+  margin: 100px auto;
+  padding: 50px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    text-align: center;
+  }
+
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    input {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+      max-height: 200px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+    }
+  }
+  button {
+    background: gold;
+    border: none;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+
+//Popup
+
+
+.wrapper{
+  background-color: rgba(128,128,128,0.500);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left:0;
+  display: grid;
+  place-items: center;
+
+  .popup{
+    background-color: white;
+   padding: 10px;
+   border-radius: 10px;
+display: flex;
+flex-direction: column;
+   width: 70%;
+   height: 80%;
+   gap: 20px;
+
+.btn-wrap{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+h4{
+  color:black
+}
+  span{
+
+    color: gold;
+  }
+
+  button{
+    padding: 10px 20px;
+    border: none;
+    background-color: crimson;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+  }
+}
+
+  }
+}
