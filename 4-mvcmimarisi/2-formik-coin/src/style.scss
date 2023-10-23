@@ -50,7 +50,7 @@ button {
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
-  margin-top: 18px;
+  margin: 28px 0;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   color: #7e97b8;
@@ -156,4 +156,35 @@ header {
   .active {
     text-shadow: 0 0 1rem #646cff;
   }
+}
+
+//
+
+.up {
+  color: rgb(0, 212, 0) !important;
+}
+
+.down {
+  color: red !important;
+}
+
+.cardd {
+  transition: all 0.3s;
+}
+.cardd:hover {
+  cursor: pointer;
+  transform: translate(10px, -10px);
+  box-shadow: 0 0 30px #e0e8ef8a;
+}
+
+table tr {
+  cursor: pointer;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#detail {
+  overflow-y: hidden;
 }

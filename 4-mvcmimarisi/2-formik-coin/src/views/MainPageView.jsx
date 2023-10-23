@@ -2,20 +2,29 @@ import millify from 'millify';
 import React from 'react';
 import { FaBitcoin } from 'react-icons/fa';
 import LoadMoreController from '../controllers/LoadMoreController';
+import CardView from './CardView';
+import { useNavigate } from 'react-router-dom';
 
-const MainPageView = ({ coins }) => {
+const MainPageView = ({ coins, popular }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="container-xl mt-5">
       <h4 className="d-flex align-items-center gap-3">
         <FaBitcoin /> <span>Hoş Geldiniz, Coin Listesi</span>
       </h4>
+
       <p>
         Coin Listesi, dünya genelindeki kripto para birimlerini ve
-        dijital varlıkları takip etmek için mükemmel bir kaynaktır. En
-        güncel kripto fiyatları, piyasa haberleri ve analizler burada!
-        Kripto dünyasının nabzını tutan Coin Listesi ile yatırımınızı
-        yönlendirin
+        dijital varlıkları takip etmek için mükemmel bir kaynaktır.
       </p>
+
+      <div className="d-flex gap-4 justify-content-around">
+        {/* populerli listele */}
+        {popular?.map((i) => (
+          <CardView data={i} />
+        ))}
+      </div>
 
       <table className="table table-dark  table-hover w-100 mt-5">
         <thead>
@@ -31,7 +40,10 @@ const MainPageView = ({ coins }) => {
         <tbody>
           {coins
             ? coins.map((coin, id) => (
-                <tr>
+                <tr
+                  onClick={() => navigate(`/coin/${coin.id}`)}
+                  key={id}
+                >
                   <td>{id + 1}</td>
                   <td>
                     <span className="text-warning fw-bold me-2">
@@ -44,7 +56,13 @@ const MainPageView = ({ coins }) => {
                   <td>${millify(coin.priceUsd)}</td>
                   <td>${millify(coin.marketCapUsd)}</td>
                   <td>${millify(coin.volumeUsd24Hr)}</td>
-                  <td>{millify(coin.changePercent24Hr)}%</td>
+                  <td
+                    className={
+                      coin.changePercent24Hr >= 0 ? 'up' : 'down'
+                    }
+                  >
+                    {millify(coin.changePercent24Hr)}%
+                  </td>
                 </tr>
               ))
             : 'yükleniyor'}

@@ -1,12 +1,12 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const HeaderView = () => {
   return (
     <header>
-      <div className="h-logo">
+      <Link to={'/home'} className="h-logo">
         <img src="/c-logo.png" alt="logo" />
-        <h3>Coinmania</h3>
-      </div>
+        <h3 className="text-white">Coinmania</h3>
+      </Link>
 
       <div className="links">
         <NavLink to={'/'}>Giriş Yap</NavLink>
