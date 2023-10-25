@@ -22,7 +22,7 @@ test('soslaarı ekleme çıkarma toplam fiyatı etkiler', async () => {
   // toplamı kontrol etme
   expect(total).toHaveTextContent('3');
 
-  //   bir sosou çağırma
+  //   bir sosu çağırma
   const cherryCheck = await screen.findByRole('checkbox', {
     name: /Cherries/i,
   });

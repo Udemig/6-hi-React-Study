@@ -34,6 +34,7 @@ it('her bir kullanıcı için email isim ve yaş değerleri tablo hücrsi olarak
     const mail = screen.getByRole('cell', { name: user.email });
     // kulalnın yaşını içeren tablo hücreis al
     const age = screen.getByRole('cell', { name: user.age });
+
     // hücrelerde ekranda mı kontrol ?
     expect(name).toBeVisible();
     expect(mail).toBeVisible();
