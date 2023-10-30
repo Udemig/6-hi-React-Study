@@ -26,6 +26,19 @@ export type CarType = {
   year: number;
 };
 
+export type filterType = {
+  make?: string;
+  model?: string;
+  limit?: string;
+  fuel?: string;
+  year?: string;
+};
+
+export type OptionType = {
+  label: string;
+  value: string;
+};
+
 // type TestType3<T> = {
 //   name: string;
 //   surname: string;

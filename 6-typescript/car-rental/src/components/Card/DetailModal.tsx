@@ -1,5 +1,6 @@
 import { CarType } from '../../types';
 import { AnimatePresence, motion } from 'framer-motion';
+import { generateImage } from '../../utils';
 
 type DetailProps = {
   isOpen: boolean;
@@ -8,7 +9,6 @@ type DetailProps = {
 };
 
 const DetailModal = ({ isOpen, closeModal, car }: DetailProps) => {
-  console.log(car);
   return (
     // çıkış animasyonları eklemek istiyorsak kullanırız
     <AnimatePresence>
@@ -29,7 +29,35 @@ const DetailModal = ({ isOpen, closeModal, car }: DetailProps) => {
             </button>
 
             {/* todo > fotoğraflar */}
-            <div></div>
+            <div className="flex-1 flex flex-col gap-3">
+              <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                <img
+                  className="h-full mx-auto"
+                  src={generateImage(car)}
+                />
+              </div>
+              {/* küçük resimler */}
+              <div className="flex gap-3">
+                <div className="flex-1 flex relative w-full h-24 bg-primary-blue-100">
+                  <img
+                    className="h-full mx-auto object-contain"
+                    src={generateImage(car, '29')}
+                  />
+                </div>
+                <div className="flex-1 flex relative w-full h-24 bg-primary-blue-100">
+                  <img
+                    className="h-full mx-auto object-contain"
+                    src={generateImage(car, '33')}
+                  />
+                </div>
+                <div className="flex-1 flex relative w-full h-24 bg-primary-blue-100">
+                  <img
+                    className="h-full mx-auto object-contain"
+                    src={generateImage(car, '13')}
+                  />
+                </div>
+              </div>
+            </div>
 
             {/* araba bilgilerini objeden dizye çevirip dönme */}
             {Object.entries(car)

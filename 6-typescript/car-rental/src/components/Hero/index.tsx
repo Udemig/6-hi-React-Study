@@ -2,8 +2,12 @@ import CustomButton from '../CustomButton';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-  //   todo
-  const scrollTo = () => {};
+  const scrollTo = () => {
+    const ele: HTMLElement | null =
+      document.getElementById('catalogue');
+
+    ele?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="hero">

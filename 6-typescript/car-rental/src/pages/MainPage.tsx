@@ -5,15 +5,23 @@ import CustomFilter from './../components/CustomFilter/index';
 import { fetchCars } from '../utils';
 import { CarType } from '../types';
 import Card from '../components/Card';
+import { useSearchParams } from 'react-router-dom';
+import { fuels, years } from './../constants/index';
+import ShowMore from '../components/ShowMore';
 
 const MainPage = () => {
   // state'i ve state'te tutucağımız verinin tipini tanımlama
   const [cars, setCars] = useState<CarType[]>([]);
 
+  const [params, setParams] = useSearchParams();
+
   useEffect(() => {
+    // urldeki bütün paramları alır ve obje oluşturur
+    const paramsObj = Object.fromEntries(params.entries());
+
     // araba veirlerini al
-    fetchCars().then((res: CarType[]) => setCars(res));
-  }, []);
+    fetchCars(paramsObj).then((res: CarType[]) => setCars(res));
+  }, [params]);
 
   return (
     <div>
@@ -24,17 +32,17 @@ const MainPage = () => {
         className="mt-12 padding-x padding-y max-width"
       >
         <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold">Araba Katoloğu</h1>
+          <h1 className="text-4xl font-extrabold">Araba Kataloğu</h1>
           <p>Beğenebileceğin arabaları keşfet</p>
         </div>
 
         {/* Filtreleme Alanı */}
-        <div className="home__filter">
+        <div className="home__filters">
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter />
-            <CustomFilter />
+            <CustomFilter title="Yakıt Tipi" options={fuels} />
+            <CustomFilter title="Üretim Yılı" options={years} />
           </div>
         </div>
 
@@ -50,7 +58,7 @@ const MainPage = () => {
                 <Card key={i} car={car} />
               ))}
             </div>
-            <button>Daha Fazla</button>
+            <ShowMore />
           </section>
         )}
       </div>
