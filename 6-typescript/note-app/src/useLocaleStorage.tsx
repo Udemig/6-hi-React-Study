@@ -4,7 +4,7 @@
 // görevini bizim belirlediğimiz hooklardır
 // genelde veriyi ve veriyi güncelleiyecek fonksiyonu dizi içinde dönerler
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useLocaleStorage<T>(key: string, initialValue: T) {
   //1) state'i tanımlama

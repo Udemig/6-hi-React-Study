@@ -75,3 +75,5 @@ const MainPageView = ({ coins, popular }) => {
 };
 
 export default MainPageView;
+
+// 35

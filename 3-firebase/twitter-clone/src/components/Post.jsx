@@ -84,7 +84,7 @@ const Post = ({ tweet }) => {
           <div className="flex items-center gap-3">
             <p className="font-bold">{tweet.user.name}</p>
             <p className="text-gray-400">
-              @{tweet.user.name.toLowerCase()}
+              @{tweet?.user?.name?.toLowerCase()}
             </p>
             <p className="text-gray-400">{date}</p>
           </div>
@@ -96,6 +96,7 @@ const Post = ({ tweet }) => {
             />
           )}
         </div>
+
         {/* orta kısım > tweet içeirği */}
         <div className="my-3">
           {isEditMode ? (

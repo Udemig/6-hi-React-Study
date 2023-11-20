@@ -13,6 +13,7 @@ import Loading from './Loading';
 const Main = ({ user }) => {
   const [tweets, setTweets] = useState(null);
   const tweetsCol = collection(db, 'tweets');
+  // 22-40 > 23-15
 
   useEffect(() => {
     // filtreleme yarları tanımlama

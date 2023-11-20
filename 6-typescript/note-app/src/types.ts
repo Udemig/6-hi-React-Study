@@ -13,16 +13,15 @@ export type Tag = {
   label: string;
 };
 
-
 // Verileri lokal'de tututarken kullanıcığımı veri tipi
-// Verilerli veritabalanarıdan tutarken dizide elemanlar 
+// Verilerli veritabalanarıdan tutarken dizide elemanlar
 // genelde sadece id lerini tutumayı tercih ederiz
-export type RawNote ={
-    id:string,
+export type RawNote = {
+  id: string;
 } & RawNoteData;
 
 export type RawNoteData = {
   title: string;
-  markdownd: string;
+  markdown: string;
   tagIds: string[];
 };

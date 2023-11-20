@@ -17,7 +17,7 @@ const MainPageController = () => {
       .then((res) => {
         setCoins(coins.concat(res.data.data));
         if (!popular) {
-          setPopular(res.data.data.slicee(0, 3));
+          setPopular(res.data.data.slice(0, 3));
         }
       });
   }, [params]);
